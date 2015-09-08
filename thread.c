@@ -465,13 +465,6 @@ void dispatch_conn_new(int sfd, enum conn_states init_state, int event_flags,
     }
 }
 
-/*
- * Returns true if this is the thread that listens for new TCP connections.
- */
-int is_listen_thread() {
-    return pthread_self() == dispatcher_thread.thread_id;
-}
-
 /********************************* ITEM ACCESS *******************************/
 
 /*
